@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en_us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Todo Manager</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Todo Manager</h1>
+            <h3>Effectively Manage Your Daily Tasks</h3>
+        </header>
+        <main>
+            <div class="board-container">
+                <div id="noticeBoard"></div>
+            </div>
+            <div class="board-container">
+                <div class="add-task">
+                    <form id="addForm">
+                        <div class="field-wrapper">
+                            <label for="taskTile">
+                                Title:
+                            </label>
+                            <input id="taskTitle" class="border-bottom" type="text" list="quotes" placeholder="Task's Title" required>
+                        </div>
+                        <div class="field-wrapper">
+                            <label for="dateTime">
+                                Date/Time:
+                            </label>
+                            <input id="dateTime" class="border-bottom" type="datetime-local" placeholder="Start Date/Time..." required>
+                        </div>
+                        <div class="field-wrapper">
+                            <label for="status">
+                                Task Status:
+                            </label>
+                            <input id="status" class="border-bottom" type="text" list="statuses" placeholder="Choose task status..." required>
+                            <datalist id="statuses">
+                                <option value="Pending">
+                                <option value="Progressing">
+                                <option value="Done">
+                            </datalist>
+                        </div>
+                        <div class="field-wrapper">
+                            <label for="detail">
+                                Task Details:
+                            </label>
+                            <textarea id="detail" placeholder="Task detail..." required></textarea>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" id="addTask" onclick="submitTask()">
+                                Save Task
+                            </button>
+                            <button type="submit" id="clearSaved" onclick="clearSavedTasks()">
+                                Delete All Tasks?
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="table-resp">
+                <table id="Tasks">
+                    <caption>Schedule and Manage Your Daily Tasks</caption>
+                    <thead>
+                        <tr>
+                            <th class="task-title">Title</th>
+                            <th class="task-detail">Details</th>
+                            <th class="task-date">Date & Time</th>
+                            <th class="task-status">Status</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th title="All time total number of tasks saved">Total Tasks Added</th>
+                            <th title="Total number of completed tasks among the  task list">Tasks Completed</th>
+                            <th title="Total number of uncompleted tasks among the  task list">Uncompleted Tasks</th>
+                            <th title="All time total number of deleted tasks">Tasks Deleted</th>
+                        </tr>
+                        <tr id="taskStat" class="text-center">
+                            <td colspan="4" class="text-center">
+                                No stats available. Start adding tasks to see statistics.
+                            </td>
+                        </tr>
+                    </tfoot>
+                    <tbody id="allTask">
+                        <tr>
+                            <td colspan="4" class="text-center">
+                                No saved task. Use form above to add task(s).
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <div id="Connect" class="important-links">
+                Connect:
+                <a href="https://twitter.com/alifestus/" title="Connect on Twitter" target="_blank">Twitter</a>
+                <a href="https://github.com/festusali/" title="Connect on Github" target="_blank">Github</a>
+                <a href="https://linkedin.com/in/festus-ali/" title="Connect on LinkedIn" target="_blank">LinkedIn</a>
+            </div>
+            &copy; <span id="year">2020</span> Festus Ali. Some rights reserved.
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
