@@ -99,7 +99,6 @@ function clearSavedTasks() {
     updateDataTables();
     document.getElementById("noticeBoard").innerHTML = "All saved items and stats have been deleted.";
     return window.location = "#noticeBoard";
-    event.preventDefault();
 };
 
 function submitTask() {
@@ -176,8 +175,8 @@ function updateTaskList() {
             <td>
                 ${tasks[i].status}
                 <div>
-                    <button type="submit" onclick="removeTask('${i}')">Delete</button>
-                    <button type="submit" onclick="populateUpdateFields('${i}')">Update</button></div>
+                    <button type="submit" class='btnBtn' onclick="removeTask('${i}')">Delete</button>
+                    <button type="submit" class='btnBtn' onclick="populateUpdateFields('${i}')">Update</button>
                 </div>
             </td></tr>`;
         };

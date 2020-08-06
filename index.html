@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
         <title>Todo Manager</title>
     </head>
 
@@ -50,11 +51,11 @@
                             <textarea id="detail" placeholder="Task detail..." required></textarea>
                         </div>
                         <div class="button-container">
-                            <button type="submit" id="addTask" onclick="submitTask()">
+                            <button type="submit" id="addTask" class="btn" onclick="submitTask()">
                                 Save Task
                             </button>
-                            <button type="submit" id="clearSaved" onclick="clearSavedTasks()">
-                                Delete All Tasks?
+                            <button type="submit" id="clearSaved" class="btn" onclick="clearSavedTasks()">
+                                Delete All?
                             </button>
                         </div>
                     </form>
