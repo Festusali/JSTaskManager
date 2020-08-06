@@ -5,7 +5,7 @@
 body {
     margin: 84px auto auto auto;
     padding: none;
-    background-color: #c6aee2;
+    background-color: #E1E1E1;
 }
 
 header {
@@ -23,9 +23,8 @@ footer {
 
 header, footer {
     padding: 6px 3px;
-    background: #4f03a5; /* For browsers that do not support gradients */
-    background: linear-gradient(to bottom, #4f03a5, #670fca, #7619e0); /* Standard syntax */
-    color: darkorange;
+    background: #000;
+    color: #fff;
 }
 
 header a, footer a {
@@ -51,35 +50,40 @@ main {
 }
 
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
+    margin: 0px auto;
+    box-shadow: 0px 0px 5px #000;
 }
-
+table, th, td {
+    border: 1px solid #000;
+}
 table caption {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
     font-size: x-large;
     font-weight: 400;
     font-family: fantasy;
-    font-style: italic;
 }
 
 tr:nth-child(even) {
-    background-color: #c79ef7
+    background-color: silver
 }
 
 tr:hover {
-    background-color: #a369e6;
+    background-color: grey;
 }
 
 th {
     height: 46px;
-    background-color: #8435df;
-    border-bottom: 2px solid #670fca;
+    background-color: #F8F8F8;
+    color: #000;
 }
 
 td {
     padding: 5px;
     vertical-align: top;
-    border-bottom: 1px solid #7619e0;
+    border-bottom: 1px solid grey;
 }
 
 label {
@@ -87,73 +91,86 @@ label {
 }
 
 input, textarea {
+    height: 50px;
     width: 100%;
+    background: #F1F1F1;
     margin: 10px 2px;
     padding: 5px;
-    color: #4f03a5;
-    border: none;
-    border-bottom: 2px solid #4f03a5;
-    border-radius: 0.3em;
     outline: none;
+    border: 2px solid #CDCDCD;
+    border-radius: 0.3em;
+    font-size: 1.3em;
 }
-
-input:hover, textarea:hover {
-    color: #09ce09;
-}
-
 textarea {
     height: 115px;
 }
 
-button {
-    background: #4f03a5; /* For browsers that do not support gradients */
-    background: linear-gradient(to bottom, #934ae6, #4f03a5, #8c35f0); /* Standard syntax */
+button.btn {
+    height: 50px;
+    width: 30%;
+    font-size: 1.5em;
+    background: #FF6622;
     color: white;
-    margin: 5px;
+    margin: 10px 5px 0px 5px;
     padding: 10px 15px;
-    border: 2px groove white;
+    border-radius: 5px;
     outline: none;
+    cursor: pointer;
 }
-
+button.btnBtn{
+    height: 40px;
+    width: 45%;
+    background: #FF6622;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #FF6622;
+}
 .table-resp {
     overflow-x:auto;
 }
-
 .task-title {
     width: 20%;
+    font-size: 1.5em;
 }
-
-.tast-detail {
-    width: 60%;
+th{
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+.task-detail {
+    width: 50%;
+    font-size: 1.5em;
 }
 
 .task-date, .task-status {
-    width: 10%;
+    width: 15%;
+    font-size: 1.5em;
 }
 
 .text-center {
     text-align: center;
+    height: 40px;
+    font-size: 1.6em;
 }
 
 .board-container {
     margin: auto;
     width: 100%;
-    /*display: -webkit-flex;
-    display: flex;
-    justify-content: center;*/
 }
 
 .board-container #noticeBoard {
     text-align: center;
     padding: 15px 5px;
+    color: green;
+    font-size: 1.5em;
 }
 
 #addForm {
-    border: 5px inset #4f03a5;
-    border-top-right-radius: 1.0em;
-    border-bottom-right-radius: 1.0em;
-    padding: 30px;
+    background: #F8F8F8;
+    box-shadow: 0px  0px  8px grey;
+    padding: 30px 30px 50px 30px;
     margin: 15px;
+    border-top: 4px solid #FF6622;
 }
 
 .button-container {
@@ -169,24 +186,20 @@ button {
 
 #clearSaved {
     position: absolute;
-    color: red;
+    color: #fff;
     right: -7px;
-    border: 2px solid red;
 }
-
 
 @media (max-width: 450px) {
     .button-container {
         position: static;
         height: auto;
     }
-
     #addTask, #clearSaved {
         position: static;
         display: inline-block;
         margin-top: 5px;
-    }
-    
+    } 
     #clearSaved {
         color: red;
         border: 2px solid red;
